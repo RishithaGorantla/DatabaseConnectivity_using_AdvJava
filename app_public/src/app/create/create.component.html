@@ -1,0 +1,20 @@
+
+<h1>Add a game you like!</h1>
+
+<div>
+  <form (ngSubmit)="createNewGame(newGame)">
+    <label for="name">Name</label>
+    <input type="text" [(ngModel)]="newGame.name" id="name" name="name" required="required" />
+    <label for="type">Type</label>
+    <input type="text" [(ngModel)]="newGame.type" id="type" name="type" required="required" />
+    <label for="players">Players</label>
+    <input type="number" [(ngModel)]="newGame.players" id="players" name="players" required="required" />
+    <label for="origin">Country</label>
+    <input type="text" [(ngModel)]="newGame.origin" id="origin" name="origin" required="required" />
+    <label for="stared">Is it your favourite game</label><br />
+    <input type="radio" [(ngModel)]="newGame.stared" id="true" name="true" value="true" /> <label class="customLabel" for="true">Yes</label>
+    <input type="radio" [(ngModel)]="newGame.stared" id="false" name="false" value="false"/> <label class="customLabel"  for="false">No</label><br>
+    <button type="submit">Submit</button>
+  </form>
+
+</div>

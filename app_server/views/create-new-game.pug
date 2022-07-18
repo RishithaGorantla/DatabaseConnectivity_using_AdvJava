@@ -1,0 +1,25 @@
+extends layout
+
+block content
+    br
+    form(action='/new', method='POST')
+        p
+            label(for='name') Name :  
+            input(type='text', name='name',value='')
+            br
+            br
+            label(for='type') Type :  
+            input(type='text', name='type', value='')
+            br
+            br
+            label(for='players') Players :              
+            input(type='number', name='players', value='')      
+            br
+            br
+            label(for='origin') Country :  
+            input(type='text', name='origin', value='')
+            br
+            br      
+			label(for='stared') Is it your favourite game :  
+            input(type='boolean', name='stared', value='')
+        input(type='submit', value='submit')
